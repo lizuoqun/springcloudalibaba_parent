@@ -12,6 +12,7 @@
         <module>nacos_client</module>
         <module>nacos_user</module>
         <module>nacos_product</module>
+        <module>nacos_config</module>
     </modules>
 
     <parent>
