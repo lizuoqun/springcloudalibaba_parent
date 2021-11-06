@@ -6,7 +6,11 @@
 
     <groupId>com.lzq</groupId>
     <artifactId>springcloudalibaba_parent</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>nacos_client</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -33,7 +37,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>{spring.cloud.alibaba-version}</version>
+                <version>${spring.cloud.alibaba-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
