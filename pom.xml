@@ -13,6 +13,7 @@
         <module>nacos_user</module>
         <module>nacos_product</module>
         <module>nacos_config</module>
+        <module>sentinel</module>
     </modules>
 
     <parent>
