@@ -16,23 +16,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @GetMapping("/demo")
-    @SentinelResource(value = "sentinelDemo", blockHandler = "blockHandler" , fallback = "fall")
-    public String demo(Integer id){
-        if (id<0) throw new RuntimeException("id 无效");
+    @SentinelResource(value = "sentinelDemo", blockHandler = "blockHandler", fallback = "fall")
+    public String demo(Integer id) {
+        if (id < 0) {
+            throw new RuntimeException("id 无效");
+        }
         return "demo ok";
     }
 
-    public String blockHandler(Integer id, BlockException e){
-        if(e instanceof FlowException){
+    public String blockHandler(Integer id, BlockException e) {
+        if (e instanceof FlowException) {
             return "已被流控";
         }
-        if(e instanceof DegradeException){
+        if (e instanceof DegradeException) {
             return "已被降级";
         }
         return "=====";
     }
 
-    public String fall(){
+    public String fall() {
         return "服务器异常";
     }
 }
