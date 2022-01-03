@@ -7,4 +7,5 @@
 - 流控：Sentinel
 
 gitmoji
-:white_check_mark:
+:white_check_mark: 增加测试
+:bug: bug修复
